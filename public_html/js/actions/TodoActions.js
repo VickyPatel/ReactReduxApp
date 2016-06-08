@@ -4,6 +4,20 @@ const actions = {
             type: 'ADD_TODO',
             text
         }
+    },
+
+    completeTodo: function(id){
+    	return{
+    		type: 'COMPLETE_TODO',
+    		id
+    	}
+    },
+
+    deleteTodo: function(id){
+    	return{
+    		type: 'DELETE_TODO',
+    		id
+    	}
     }
 }
 

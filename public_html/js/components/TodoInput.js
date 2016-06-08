@@ -1,7 +1,5 @@
 import React from 'react';
 
-import actions from '../actions/TodoActions';
-
 export default class TodoInput extends React.Component {
 
 	constructor(props, context){
@@ -20,7 +18,7 @@ export default class TodoInput extends React.Component {
 	handleAddTodo(event){
 		event.preventDefault();
 		console.log('Submit clicked');
-		this.props.dispatch(actions.addTodo(this.state.inputText));
+		this.props.addTodo(this.state.inputText);
 		this.state.inputText = "";
 	}
 
@@ -39,7 +37,7 @@ export default class TodoInput extends React.Component {
 		        	<div class="col-lg-4 col-xs-4">
 			        	<input 
 			        		type="submit"
-		        			class="btn btn-success"
+		        			class="btn btn-warning"
 		        			text="Submit"/>
 		        	</div> 
 		        </div>

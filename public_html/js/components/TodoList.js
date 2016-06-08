@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default class TodoInput extends React.Component {
+import TodoItem from './TodoItem';
+
+export default class TodoList extends React.Component {
     render() {
         const listStyle = {
             padding: 15,
@@ -12,7 +14,7 @@ export default class TodoInput extends React.Component {
         		<ul>
         			{
         				this.props.todos.map((todo) => {
-        					return <li key={todo.id}>{todo.text}</li>
+        					return <TodoItem key={todo.id} todo={todo} actions={this.props.actions} />
         				})
         			}
         		</ul>		
